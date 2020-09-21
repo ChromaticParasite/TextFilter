@@ -12,13 +12,16 @@ namespace TextFilter
 			// [Input, Expected Output]
 			string[,] testCases = new string[,]
 			{
-				{"ass", "***" },
-				{"@55", "***" },
-				{"pass", "pass" },
-				{"p@ss", "p@ss" },
-				{"The ass is mad.", "The *** is mad." },
-				{"The @55 is mad.", "The *** is mad." },
-				{"The @55 i5 m@d.", "The *** i5 m@d." },
+				//{"ass", "***" },
+				//{"sass", "sass" },
+				//{"@55", "***" },
+				//{"pass", "pass" },
+				//{"p@ss", "p@ss" },
+				//{"The a.s.s", "The *.*.*" },
+				//{"The ass is mad.", "The *** is mad." },
+				//{"The @55 is mad.", "The *** is mad." },
+				//{"The @55 i5 m@d.", "The *** i5 m@d." },
+				{"ass n ass", "*** n ***" },
 				{"The ass is an ass.", "The *** is an ***." },
 				{"The @$$ i5 an ass.", "The *** i5 an ***." },
 				{"The @$$ i5 an @$$.", "The *** i5 an ***." },
@@ -27,6 +30,8 @@ namespace TextFilter
 				{"Can you pass the ass?", "Can you pass the ***?" },
 				{"Can you p@s5 the @s$?", "Can you p@s5 the ***?" }
 			};
+			
+
 
 			TextFilter TF = new TextFilter();
 
@@ -53,7 +58,6 @@ namespace TextFilter
 				Console.ForegroundColor = ConsoleColor.White;
 				//Console.WriteLine();
 			}
-
 		}
 	}
 }
